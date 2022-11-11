@@ -1,0 +1,22 @@
+<div class="containter" >
+  <h1 style="text-align: center;">Service demo</h1>
+  <div class="center">
+  <button  align="center" type="button" (click)="getProducts()">Available products</button>
+  </div>
+  <table border="2" align="center">
+    <div class="c" style="font-family: cursive; background-color: rgb(140, 77, 249) ;">
+      <th style="padding:5px;">PRODUCT ID</th>
+      <th style="padding: 20px;">PRODUCT NAME</th>
+      <th style="padding:5px;">PRICE</th>
+      <th style="padding:5px;">IMAGE</th>
+      </div>
+      <div style="background-color:rgb(245, 217, 248) ;">
+      <tr *ngFor="let product of products">
+          <td style="padding: 50px; ">{{product.productID}}</td>
+          <td>{{product.name}}</td>
+          <td>{{product.price}}</td>
+          <td><img src="{{product.image}}" style="right: 20px; ;" height="200px"></td>
+      </tr>
+      </div>
+  </table>
+</div>
